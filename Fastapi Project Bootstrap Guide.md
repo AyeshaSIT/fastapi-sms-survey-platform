@@ -164,7 +164,7 @@ uv add fastapi uvicorn
 ## Development Dependencies
 
 ```bash
-uv add --dev ruff pytest
+uv add --dev pytest pytest-asyncio httpx ruff
 ```
 
 ---
@@ -184,6 +184,21 @@ uv add pydantic-settings python-dotenv
 ```
 
 ---
+## Install auth/security:
+```bash
+uv add python-jose[cryptography] passlib[bcrypt]
+```
+---
+## Install queue system:
+```bash
+uv add celery redis
+```
+---
+## Project quirements may vary. Add other dependencies as needed.:
+## Install Twilio: (for SMS survey platform)
+```bash
+uv add twilio
+```
 
 # 8. Recommended Project Structure
 

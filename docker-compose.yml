@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: sms_survey_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sms_survey_db
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    container_name: sms_survey_redis
+    restart: always
+    ports:
+      - "6379:6379"
